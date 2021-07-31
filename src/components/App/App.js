@@ -1,7 +1,7 @@
 import axios from "axios";
 import {useState} from "react";
 
-function App() {
+export default function App() {
   const [response, setResponse] = useState("");
 
   function testingBackend(){
@@ -18,5 +18,3 @@ function App() {
     </>
   );
 }
-
-export default App;
