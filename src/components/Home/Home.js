@@ -9,7 +9,7 @@ export default function Home(){
         <Page>
             <NavBar>
                 <div className="brand">
-                    <div><img src={logo} height="30px"/></div>
+                    <div><img src={logo} alt="logo" height="30px"/></div>
                     <div>Repo</div>
                     <div>Provas</div>
                 </div>
@@ -19,12 +19,12 @@ export default function Home(){
                 <HomeContent>
                     <div className="find-exam">
                         <StyledLink to="/find-one">
-                            <img src={lupa} height="120px"/>
+                            <img src={lupa} alt="lupa" height="120px"/>
                         </StyledLink>
                     </div>
                     <div className="new-exam">
                         <StyledLink to="/new-one">
-                            <img src={newExam} height="120px"/>
+                            <img src={newExam} alt="new-exam" height="120px"/>
                         </StyledLink>
                     </div>               
                 </HomeContent>

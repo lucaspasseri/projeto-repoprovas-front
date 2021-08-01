@@ -36,7 +36,7 @@ export default function FindOne(){
         <Page>
             <NavBar>
                 <div className="brand">
-                    <div><img src={logo} height="30px"/></div>
+                    <div><img src={logo} alt="logo" height="30px"/></div>
                     <div>Repo</div>
                     <div>Provas</div>
                 </div>
