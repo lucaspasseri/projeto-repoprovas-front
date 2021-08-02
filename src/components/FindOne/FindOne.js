@@ -18,7 +18,7 @@ export default function FindOne(){
                 setOptions([true, false]);
                 const request = axios.get(`${process.env.REACT_APP_API_BASE_URL}/professors`);
                 request.then(response => setChosenContent(response.data));
-                request.catch(error => console.log(`${error.response.status} ${error.response.statusText}`));
+                request.catch(error => alert(`${error.response.status} ${error.response.statusText}`));
             }
         } else {
             if(options[1]){
@@ -27,10 +27,12 @@ export default function FindOne(){
                 setOptions([false, true]);
                 const request = axios.get(`${process.env.REACT_APP_API_BASE_URL}/subjects`);
                 request.then(response => setChosenContent(response.data));
-                request.catch(error => console.log(`${error.response.status} ${error.response.statusText}`));
+                request.catch(error => alert(`${error.response.status} ${error.response.statusText}`));
             }
         }
     }
+
+    const showContent = chosenContent.map(item => <div key={item.id}>{item.name}</div>)
 
     return(
         <Page>
@@ -54,7 +56,7 @@ export default function FindOne(){
                         </div>              
                     </div>
                     <div>
-                        {chosenContent}
+                        {showContent}
                     </div>
                 </Content>
             </div>
